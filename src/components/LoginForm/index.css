@@ -30,6 +30,11 @@
 
 .login-img {
   width: 278px;
+  border: 5px solid #8d8315;
+  animation: bounce 2.5s;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(0.49, 0, 0.89, 0.74);
+  animation-iteration-count: infinite;
 }
 
 @media screen and (min-width: 992px) {
@@ -119,7 +124,7 @@
   width: 100%;
   margin-top: 20px;
   margin-bottom: 2px;
-  background-color: #0b69ff;
+  background-color: #f5b301;
   border-radius: 8px;
   border: none;
   cursor: pointer;
@@ -130,7 +135,7 @@
   font-family: 'Roboto';
   font-weight: bold;
   font-size: 14px;
-  color: #0b69ff;
+  color: #f5b301;
   height: 40px;
   width: 100%;
   margin-top: 20px;

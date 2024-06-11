@@ -18,7 +18,7 @@ const Header = props => {
           <Link to="/">
             <img
               className="website-logo"
-              src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-logo-img.png"
+              src="https://media.licdn.com/dms/image/D4D0BAQHhkPy2EJOqTA/company-logo_200_200/0/1711614121467/bindassdeal_private_limited_logo?e=1726099200&v=beta&t=TaPF5i0QYVHi3UVRubt-VGO5IXP67u7uHxebUADVTSY"
               alt="website logo"
             />
           </Link>
@@ -37,23 +37,10 @@ const Header = props => {
           <Link to="/">
             <img
               className="website-logo"
-              src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-logo-img.png"
+              src="https://media.licdn.com/dms/image/D4D0BAQHhkPy2EJOqTA/company-logo_200_200/0/1711614121467/bindassdeal_private_limited_logo?e=1726099200&v=beta&t=TaPF5i0QYVHi3UVRubt-VGO5IXP67u7uHxebUADVTSY"
               alt="website logo"
             />
           </Link>
-          <ul className="nav-menu">
-            <li className="nav-menu-item">
-              <Link to="/" className="nav-link">
-                HOME
-              </Link>
-            </li>
-
-            <li className="nav-menu-item">
-              <Link to="/products" className="nav-link">
-                ADD-ITEM
-              </Link>
-            </li>
-          </ul>
           <button
             type="button"
             className="logout-desktop-btn"
@@ -62,29 +49,6 @@ const Header = props => {
             Logout
           </button>
         </div>
-      </div>
-      <div className="nav-menu-mobile">
-        <ul className="nav-menu-list-mobile">
-          <li className="nav-menu-item-mobile">
-            <Link to="/" className="nav-link">
-              <img
-                src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-home-icon.png"
-                alt="nav home"
-                className="nav-bar-image"
-              />
-            </Link>
-          </li>
-
-          <li className="nav-menu-item-mobile">
-            <Link to="/products" className="nav-link">
-              <img
-                src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-products-icon.png"
-                alt="nav products"
-                className="nav-bar-image"
-              />
-            </Link>
-          </li>
-        </ul>
       </div>
     </nav>
   )

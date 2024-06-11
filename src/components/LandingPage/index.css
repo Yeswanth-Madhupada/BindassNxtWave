@@ -17,6 +17,10 @@
   flex-direction: column;
 }
 
+.hdz {
+  font-size: 30px;
+}
+
 .destinations-search-container {
   width: 100%;
   max-width: 100%;
@@ -53,7 +57,7 @@
 
 .search-input-container {
   display: flex;
-  background-color: #3367d6;
+  background-color: #f5b301;
   padding-top: 8px;
   padding-left: 16px;
   padding-bottom: 8px;
@@ -61,14 +65,14 @@
 }
 
 .search-input {
-  color: #f8fafc;
-  background-color: #2850a7;
+  color: #000000;
+  background-color: #ffffff;
   font-family: 'Roboto';
   font-size: 14px;
   font-weight: 500;
   width: 100%;
   outline: none;
-  border: 1px solid #6697ff;
+  border: 1px solid #ffffff;
   border-left: none;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
@@ -76,18 +80,27 @@
 }
 
 .search-icon-color {
-  background-color: #2850a7;
+  background-color: hsl(0, 0%, 0%);
   width: 30px;
   height: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
-  border: 1px solid #6697ff;
+  border: 1px solid #ffffff;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
-
+.btz {
+  background-color: transparent;
+  margin-top: 10px;
+  margin-right: 10px;
+  height: 50px;
+  width: 120px;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  color: hsl(0, 0%, 0%);
+}
 .search-icon {
   height: 20px;
   width: 20px;
@@ -130,7 +143,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(to top, #9796f0, #fbc7d4);
+  background-image: linear-gradient(to top, #ced419, #ffffff);
   min-height: 100vh;
 }
 
@@ -226,11 +239,13 @@
 
 .add-button {
   align-self: flex-start;
-  background-color: #8b5cf6;
-  color: #ffffff;
+  background-color: #f5b301;
+  color: #000000;
   font-family: 'Roboto';
   font-size: 12px;
   font-weight: 500;
+  width: 60px;
+  height: 40px;
   border: none;
   border-radius: 8px;
   padding-left: 16px;
@@ -238,10 +253,13 @@
   padding-top: 8px;
   padding-bottom: 8px;
   outline: none;
+  margin-bottom: 30px;
 }
 
 .appointments-img {
   display: none;
+  margin-top: 90px;
+  height: 250px;
 }
 
 @media screen and (min-width: 768px) {

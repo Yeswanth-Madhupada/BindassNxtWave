@@ -1,3 +1,5 @@
+#First you need to register to enter so please click register
+
 > Registration page
 
 # It takes the User input i.e username and password

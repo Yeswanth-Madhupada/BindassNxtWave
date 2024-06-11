@@ -1,4 +1,5 @@
 import {Component} from 'react'
+import {Link} from 'react-router-dom'
 
 import LandingPageItems from '../LandingPageItems'
 
@@ -73,6 +74,9 @@ class LandingPage extends Component {
   state = {
     searchInput: '',
     browserList: initialHistoryList,
+    titleInput: '',
+    category: '',
+    dateInput: '',
   }
 
   onChangeSearchInput = event => {
@@ -98,8 +102,21 @@ class LandingPage extends Component {
     })
   }
 
+  onChangeDateInput = event => {
+    this.setState({dateInput: event.target.value})
+  }
+
+  onChangeTitleInput = event => {
+    this.setState({titleInput: event.target.value})
+  }
+
+  onChangeCategory = event => {
+    this.setState({category: event.target.value})
+  }
+
   render() {
     const {searchInput, browserList} = this.state
+    const {titleInput, dateInput, category} = this.state
     const searchResults = browserList.filter(eachDestination =>
       eachDestination.title.toLowerCase().includes(searchInput.toLowerCase()),
     )
@@ -129,9 +146,11 @@ class LandingPage extends Component {
                 onChange={this.onChangeSearchInput}
               />
             </div>
-            <button type="button">ADD</button>
+            <Link to="/form">
+              <button type="button">ADD</button>
+            </Link>
             <button type="button" onClick={this.sorterDate}>
-              SORT
+              SORT-Date
             </button>
           </div>
         </div>
@@ -147,8 +166,59 @@ class LandingPage extends Component {
               ))}
             </ul>
           ) : (
-            <p className="empty-history">There is no history to show</p>
+            <p className="empty-history">There is no Items to show</p>
           )}
+        </div>
+        <div className="app-container">
+          <div className="responsive-container">
+            <div className="appointments-container">
+              <div className="add-appointment-container">
+                <form className="form" onSubmit={this.onAddAppointment}>
+                  <h1 className="add-appointment-heading">Add Item</h1>
+                  <label htmlFor="title" className="label">
+                    TITLE
+                  </label>
+                  <input
+                    type="text"
+                    id="title"
+                    value={titleInput}
+                    onChange={this.onChangeTitleInput}
+                    className="input"
+                    placeholder="Title"
+                  />
+                  <label htmlFor="title" className="label">
+                    CATEGORY
+                  </label>
+                  <input
+                    type="text"
+                    id="title"
+                    value={category}
+                    onChange={this.onChangeCategory}
+                    className="input"
+                    placeholder="Category"
+                  />
+                  <label htmlFor="date" className="label">
+                    DATE
+                  </label>
+                  <input
+                    type="date"
+                    id="date"
+                    value={dateInput}
+                    onChange={this.onChangeDateInput}
+                    className="input"
+                  />
+                  <button type="submit" className="add-button">
+                    Add
+                  </button>
+                </form>
+                <img
+                  src="https://assets.ccbp.in/frontend/react-js/appointments-app/appointments-img.png"
+                  alt="appointments"
+                  className="appointments-img"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     )

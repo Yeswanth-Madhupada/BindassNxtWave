@@ -1,4 +1,6 @@
 import './index.css'
+import {FaRegEdit} from 'react-icons/fa'
+import {Link} from 'react-router-dom'
 
 const LandingPageItems = props => {
   const {destinationDetails, deleteTransaction} = props
@@ -17,6 +19,12 @@ const LandingPageItems = props => {
         </div>
       </div>
       <div className="browser-end">
+        <Link to="/form">
+          {/* eslint-disable-next-line */}
+          <button type="button">
+            <FaRegEdit className="edit" />
+          </button>
+        </Link>
         <button
           className="delete-button"
           type="button"

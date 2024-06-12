@@ -1,4 +1,4 @@
-#First you need to register to enter so please click register
+# First you need to register to enter so please click register
 
 > Registration page
 
